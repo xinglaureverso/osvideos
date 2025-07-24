@@ -1,10 +1,66 @@
-<h2>🎥 Bem-vindo ao OSVideos™</h2>
-<p>Assista, reflita e navegue entre camadas audiovisuais reversas.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>OSVideos™</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #0d0d0d, #1a1a1a);
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
 
-<ul>
-  <li onclick="abrirVideo('video.mp4')">xinglau</li>
-  <li onclick="abrirVideo('xingos10.mp4')">F xingOS 10</li>
-  <li onclick="abrirVideo('short.mp4')">short</li>
-</ul>
+    h2 {
+      margin-bottom: 10px;
+    }
 
-<video id="player" width="600" controls></video>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      background: #333;
+      padding: 10px 20px;
+      margin: 6px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    li:hover {
+      background: #3399ff;
+    }
+
+    video {
+      border-radius: 12px;
+      box-shadow: 0 0 12px #000;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎥 OSVideos™</h2>
+  <p>Plataforma audiovisual reversa. Escolha seu ritual:</p>
+
+  <ul>
+    <li onclick="abrirVideo('video.mp4')">xinglau video</li>
+    <li onclick="abrirVideo('video2.mp4')">problems</li>
+    <li onclick="abrirVideo('video3.mp4')">🧓 Sistema Legado</li>
+  </ul>
+
+  <video id="player" width="720" controls></video>
+
+  <script>
+    function abrirVideo(nome) {
+      const player = document.getElementById("player");
+      player.src = `videos/${nome}`;
+      player.play();
+    }
+  </script>
+</body>
+</html>
